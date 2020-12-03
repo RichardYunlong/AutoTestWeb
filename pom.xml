@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<<<<<<< HEAD
     <aspectj.version>1.9.6</aspectj.version>
   </properties>
    
@@ -31,10 +32,16 @@
 		
 		<!-- selenium -->
 		<dependency>
+=======
+  </properties>
+   <dependencies>
+	   <dependency>
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 		    <groupId>org.seleniumhq.selenium</groupId>
 		    <artifactId>selenium-java</artifactId>
 		    <version>3.8.1</version>
 		</dependency>
+<<<<<<< HEAD
 		
 		<!-- allure -->
 		<dependency>
@@ -73,6 +80,13 @@
              <artifactId>commons-io</artifactId>
              <version>2.4</version>
         </dependency>
+=======
+       <dependency>
+           <groupId>com.AutoTest</groupId>
+           <artifactId>AutoTest</artifactId>
+           <version>3.0.2.1</version>
+       </dependency>
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
    </dependencies>
    
      	<build>
@@ -230,6 +244,7 @@
 						</configuration>
 					</execution>
 					<execution>
+<<<<<<< HEAD
 						<id>driver</id>
 						<phase>package</phase>
 						<goals>
@@ -248,6 +263,8 @@
 						</configuration>
 					</execution>
 					<execution>
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 						<id>cert</id>
 						<phase>package</phase>
 						<goals>

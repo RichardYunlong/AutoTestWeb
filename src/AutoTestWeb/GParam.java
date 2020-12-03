@@ -2,12 +2,17 @@ package AutoTestWeb;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+<<<<<<< HEAD
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
+=======
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 
 /**
  * 系统参数管理
@@ -28,6 +33,7 @@ public class GParam {
 	public static final String VBInfo[][] = {
 			{"ie",      "11", 
 			 "webdriver.ie.bin",
+<<<<<<< HEAD
 			 "C:/Program Files/internet explorer", 
 			 "iexplore.exe", 
 			 "webdriver.ie.driver", 
@@ -36,16 +42,35 @@ public class GParam {
 			{"chrome",  "85", 
 			 "webdriver.chrome.bin",
 			 "C:/Program Files (x86)/Google/Chrome/Application/", 
+=======
+			 "C:/Program Files/Internet Explorer/", 
+			 "iexplore.exe", 
+			 "webdriver.ie.driver", 
+			 "./driver/ie/IEDriverServer_x64.exe", 
+			 },
+			{"chrome",  "40", 
+			 "webdriver.chrome.bin",
+			 "C:/Users/hewei/AppData/Local/Google/Chrome/Application/", 
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 			 "chrome.exe", 
 			 "webdriver.chrome.driver", 
 			 "./driver/chrome/chromedriver.exe", 
 			 },
+<<<<<<< HEAD
 			{"firefox", "76", 
 		     "webdriver.firefox.bin",
 			 "C:/Program Files/Mozilla Firefox/", 
 			 "firefox.exe", 
 			 "webdriver.gecko.driver", 
 			 "./driver/firefox/geckodriver.exe", 
+=======
+			{"firefox", "52", 
+		     "webdriver.firefox.bin",
+			 "E:/Program Files/Mozilla Firefox/", 
+			 "firefox.exe", 
+			 "webdriver.gecko.driver", 
+			 "E:/Program Files/Mozilla Firefox/geckodriver64.exe", 
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 			 },
 			{"opera",   "30",
 			 "webdriver.opera.bin",
@@ -56,6 +81,7 @@ public class GParam {
 			 },
 			{"safari",  "50",
 		     "webdriver.safari.bin",
+<<<<<<< HEAD
 			 "D:/Program Files (x86)/Safari", 
 			 "Safari.exe", 
 			 "webdriver.safari.webdriver", 
@@ -67,6 +93,19 @@ public class GParam {
 			 "msedge.exe", 
 			 "webdriver.edge.driver", 
 			 "./driver/edge/msedgedriver.exe", 
+=======
+			 "E:/Program Files (x86)/Safari/", 
+			 "safari.exe", 
+			 "", 
+			 "./driver/Safari-driver.exe", 
+			 },
+			 {"Tapestry7",  "7", 
+			 "webdriver.chrome.bin",
+			 "C:\\Program Files (x86)\\CFCA\\Tapestry(Embeded Edition)", 
+			 "Tapestry7.exe", 
+			 "webdriver.chrome.driver", 
+			 "./driver/Tapestry/chromedriver.exe", 
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 			 },
 	};
 	
@@ -76,11 +115,14 @@ public class GParam {
 	public static WebDriver g_Dr;
 	
 	/**
+<<<<<<< HEAD
 	 * 全局驱动变量属性
 	 */
 	public static ChromeOptions g_Opt;
 	
 	/**
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 	 * 根据驱动序号设置系统属性
 	 */
 	private static void setVBInfoByDriverIndex(int dDriverIndex){
@@ -105,16 +147,24 @@ public class GParam {
 			{
 				dDriverIndex = 0;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new InternetExplorerDriver(GBrowser.StopSafety());
+=======
+				g_Dr = new InternetExplorerDriver(GWCtrl.StopSafety());
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case "chrome":
 			{
 				dDriverIndex = 1;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 		        g_Opt = new ChromeOptions();
 		        g_Opt.addArguments("--whitelisted-ips=\"\"");
 				g_Dr = new ChromeDriver(g_Opt);
+=======
+				g_Dr = new ChromeDriver();
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case "firefox":
@@ -128,13 +178,17 @@ public class GParam {
 			{
 				dDriverIndex = 3;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new OperaDriver();
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case "safari":
 			{
 				dDriverIndex = 4;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new SafariDriver();
 				break;
 			}
@@ -143,6 +197,16 @@ public class GParam {
 				dDriverIndex = 5;
 				setVBInfoByDriverIndex(dDriverIndex);
 				g_Dr = new EdgeDriver();
+=======
+				break;
+			}
+			case "Tapestry7":
+			{
+				dDriverIndex = 5;
+				System.setProperty("webdriver.chrome.driver",
+						"C:\\Program Files (x86)\\CFCA\\Tapestry(Embeded Edition)\\chromedriver.exe");
+				g_Dr = new ChromeDriver();
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			default:
@@ -172,14 +236,22 @@ public class GParam {
 			{
 				dDriverIndex = 0;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new InternetExplorerDriver(GBrowser.StopSafety());
+=======
+				g_Dr = new InternetExplorerDriver(GWCtrl.StopSafety());
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case 1:
 			{
 				dDriverIndex = 1;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new ChromeDriver(g_Opt);
+=======
+				g_Dr = new ChromeDriver();
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case 2:
@@ -193,22 +265,31 @@ public class GParam {
 			{
 				dDriverIndex = 3;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new OperaDriver();
 				
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case 4:
 			{
 				dDriverIndex = 4;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new SafariDriver();
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			case 5:
 			{
 				dDriverIndex = 5;
 				setVBInfoByDriverIndex(dDriverIndex);
+<<<<<<< HEAD
 				g_Dr = new EdgeDriver();
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 				break;
 			}
 			default:

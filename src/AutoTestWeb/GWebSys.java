@@ -1,7 +1,11 @@
 package AutoTestWeb;
 
 import AutoTest.GLog;
+<<<<<<< HEAD
 import AutoTest.GSys;
+=======
+import AutoTest.GParam;
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 
 /**
  *  系统管理
@@ -15,6 +19,7 @@ public class GWebSys {
 	/**
 	 *  初始化测试环境
 	 */
+<<<<<<< HEAD
 	public static boolean initTestSys(String bro) {
 		long startTime = 0;
 		
@@ -76,6 +81,36 @@ public class GWebSys {
 			IsTestReady = false;
 			GWCtrlException.SwtichTo(e, 1, 8, "initTestSys error", true);
 		}
+=======
+	public boolean initTestSys() {
+		long startTime = 0;
+		startTime = System.currentTimeMillis();
+		
+		// 初始化全局变量，用于传递参数;
+		startTime = System.currentTimeMillis();
+		new GParam();
+		GLog.GLogDoReady(startTime, "GParam");
+		
+		// 初始化用例管理器;
+		startTime = System.currentTimeMillis();
+		new GTestCase();
+		GLog.GLogDoReady(startTime, "GTestCase");
+		
+		// 初始化用例输出路径;
+		startTime = System.currentTimeMillis();
+		new GOutPutCtrl();
+		GLog.GLogDoReady(startTime, "GOutPutCtrl");
+		
+		// 重写webdriver基础方法;
+		startTime = System.currentTimeMillis();
+		new GWCtrl();
+		GLog.GLogDoReady(startTime, "GWCtrl");
+		
+		// 加载浏览器设置;
+		startTime = System.currentTimeMillis();
+		new GBrowser();
+		GLog.GLogDoReady(startTime, "GBrowser");
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 		
 		return IsTestReady;
 	}

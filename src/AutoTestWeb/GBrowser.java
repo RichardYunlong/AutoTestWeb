@@ -1,10 +1,13 @@
 package AutoTestWeb;
 
+<<<<<<< HEAD
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import AutoTest.GProcess;
 
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 /**
  *  浏览器设置
  */
@@ -27,6 +30,7 @@ public class GBrowser {
 	public static void setBrsType(String strType) {
 		BrsType = strType;
 	}
+<<<<<<< HEAD
 	
 	/**
 	 *  打开IE时使用非安全模式
@@ -60,4 +64,6 @@ public class GBrowser {
 			System.out.println("执行杀死[" + proName + "]进程成功");
 		}
 	}
+=======
+>>>>>>> 8d1834e5aed6c409826727dfa38808b37859076e
 }
